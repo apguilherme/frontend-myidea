@@ -19,4 +19,4 @@ To run this application:
 Group members: 
 - Guilherme: https://github.com/apguilherme
 
-![Screenshot](appimg.png)
+![Screenshot](appimg.jpeg)
