@@ -1,13 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
+
+import BottomNav from './components/BottomNav';
+import Header from './components/Header';
 
 export default function App() {
+  
+  const [updateList, setUpdateList] = React.useState(false);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Header updateList={updateList} setUpdateList={setUpdateList} />
+      <BottomNav updateList={updateList} setUpdateList={setUpdateList} />
+    </SafeAreaView>
   );
 }
 
@@ -15,7 +21,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    width: '100%',
   },
 });
